@@ -1,59 +1,13 @@
 <template>
-  <div class="stories">
-    <div class="stories-box">
-      <div class="circle">
-        <img src="@/assets/Ellipse1.png" alt="CircleOne">
-      </div>
-      <div class="circle-text">
-        <span>Rose</span>
-      </div>
-    </div>
-    <div class="stories-box">
-      <div class="circle">
-        <img src="@/assets/Ellipse2.png" alt="CircleOne">
-      </div>
-      <div class="circle-text">
-        <span>Hits</span>
-      </div>
-    </div>
-    <div class="stories-box">
-      <div class="circle">
-        <img src="@/assets/Ellipse3.png" alt="CircleOne">
-      </div>
-      <div class="circle-text">
-        <span>Sale</span>
-      </div>
-    </div>
-    <div class="stories-box">
-      <div class="circle">
-        <img src="@/assets/Ellipse1.png" alt="CircleOne">
-      </div>
-      <div class="circle-text">
-        <span>Children</span>
-      </div>
-    </div>
-    <div class="stories-box">
-      <div class="circle">
-        <img src="@/assets/Ellipse4.png" alt="CircleOne">
-      </div>
-      <div class="circle-text">
-        <span>Home</span>
-      </div>
-    </div>
-    <div class="stories-box">
-      <div class="circle">
-        <img src="@/assets/Ellipse5.png" alt="CircleOne">
-      </div>
-      <div class="circle-text">
-        <span>Love</span>
-      </div>
-    </div>
-    <div class="stories-box">
-      <div class="circle">
-        <img src="@/assets/Ellipse6.png" alt="CircleOne">
-      </div>
-      <div class="circle-text">
-        <span>Other</span>
+  <div class="container">
+    <div class="stories">
+      <div class="stories-box" v-for="item of items" :key="item.text">
+        <div class="circle">
+          <img :src="require(`@/assets/${item.image}`)" alt="CircleOne">
+        </div>
+        <div class="circle-text">
+          <span>{{ item.text }}</span>
+        </div>
       </div>
     </div>
   </div>
@@ -61,28 +15,68 @@
 
 <script>
 export default {
-
+data(){
+  return {
+    items: [
+      {
+        image: 'Ellipse1.png',
+        text: 'Rose'
+      },
+      {
+        image: 'Ellipse2.png',
+        text: 'Hits'
+      },
+      {
+        image: 'Ellipse3.png',
+        text: 'Sale'
+      },
+      {
+        image: 'Ellipse4.png',
+        text: 'Children'
+      },
+      {
+        image: 'Ellipse5.png',
+        text: 'Home'
+      },
+      {
+        image: 'Ellipse1.png',
+        text: 'Love'
+      },
+      {
+        image: 'Ellipse6.png',
+        text: 'Others'
+      }
+    ]
+  }
+}
 }
 </script>
 
 <style scoped>
-/*Stories*/
-.stories{
+.container{
   display: flex;
-  justify-content: center;
+  justify-content: center
 }
-.stories .stories-box{
+.stories{
+  max-width: 892px;
+  width: 892px;
+  display: flex;
+  justify-content: space-between;
+  /*flex: 1;*/
+}
+.stories-box{
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
-.stories .stories-box .circle-text{
+.circle-text{
   align-self: center;
   font-weight: 600;
   font-size: 16px;
   line-height: 100%;
   padding-top: 8px
 }
-.stories .circle{
+.circle{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,10 +84,20 @@ export default {
   height: 100px;
   border: 2px solid #7CB142;
   border-radius: 100px;
-  /*margin-right: 42px;*/
 }
-/*.stories .circle :last-child{*/
-/*  margin-right: 0;*/
-/*}*/
-
+/*Mobile version*/
+@media screen and (max-width: 540px) {
+  .stories-box{
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .circle{
+    width: 65px;
+    height: 65px;
+  }
+  img{
+    width: 59px;
+    height: 59px;
+  }
+}
 </style>

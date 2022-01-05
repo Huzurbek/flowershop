@@ -1,7 +1,7 @@
 <template>
   <div class="main-box">
     <!--Main Slideshow Container-->
-<!--    <demo-slide/>-->
+    <demo-slide/>
     <!--Card Slideshow-->
 <!--   <slideshow-card/>-->
   </div>
@@ -11,7 +11,7 @@
 export default {
   components: {
 
-    // "demo-slide": require("@/components/promotionSlideshow/MainSlideshow.vue").default,
+    "demo-slide": require("@/components/promotionSlideshow/MainSlideshow.vue").default,
     // "slideshow-card": require("@/components/promotionSlideshow/SlideshowCard.vue").default,
 
   }
