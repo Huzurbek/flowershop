@@ -4,13 +4,12 @@
     <navbar-section/>
 
     <div class="body">
-<!--      Header-->
-<!--      <div style=" margin-bottom: 84px">-->
-<!--        <header-section/>-->
-<!--      </div>-->
+      <div class="spacer">
+        <header-section/>
+      </div>
 <!--      Stories-->
       <div class="spacer">
-<!--        <stories-section/>-->
+        <stories-section/>
       </div>
 <!--      Flower Card-->
       <div class="spacer">
@@ -60,8 +59,8 @@
 export default {
   components: {
     "navbar-section": require("@/sections/NavbarSection.vue").default,
-    // "header-section": require("@/sections/HeaderSection.vue").default,
-    // "stories-section": require("@/sections/StoriesSection.vue").default,
+    "header-section": require("@/sections/HeaderSection.vue").default,
+    "stories-section": require("@/sections/StoriesSection.vue").default,
     "flower-cards-section": require("@/sections/FlowerCardsSection.vue").default,
     "promotion-slideshow-section": require("@/sections/PromotionSlideshowSection.vue").default,
     "bestsellers-section": require("@/sections/BestsellerSection.vue").default,
@@ -72,21 +71,7 @@ export default {
     "tulips-section": require("@/sections/TulipsSection.vue").default,
     "blogs-section": require("@/sections/BlogSection.vue").default,
     "florist-section": require("@/sections/Florist-section.vue").default,
-
-
-
-    // "stories": require("@/components/header/StoriesSection.vue").default,
-    // "flower-cards": require("@/components/header/FlowerCards.vue").default,
-
-
-    // "popular-categories": require("@/components/header/PopularCategories").default,
-    // "roses": require("@/components/header/Roses.vue").default,
-    // "lilies": require("@/components/header/Lilies.vue").default,
-    // "tulips": require("@/components/header/Tulips.vue").default,
-    // "blogs": require("@/components/header/Blogs.vue").default,
-    // "florist": require("@/components/header/Florist.vue").default,
-
-  },
+},
 }
 </script>
 

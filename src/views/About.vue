@@ -2,23 +2,19 @@
  <div class="containercha">
    Kompyutter
  </div>
-  <div class="containercha">
-    Kompyutter
-  </div>
-  <div class="containercha">
-    Kompyutter
-  </div>
-  <div class="containercha">
-    Kompyutter
-  </div>
-  <div class="containercha">
-    Kompyutter
-  </div>
+  <demo :title="topic"/>
 </template>
 
 <script>
 export default {
-
+  data(){
+    return {
+      // topic : 'dsds',
+    }
+  },
+components: {
+  'demo': require('@/components/example/Demo.vue').default,
+}
 }
 </script>
 

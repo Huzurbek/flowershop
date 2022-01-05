@@ -39,16 +39,16 @@ export default {
           name: "For She",
           price: "$ 180"
         },
-        {
-          image: "bestsell2.png",
-          name: "Red bouquets",
-          price: "$ 100"
-        },
-        {
-          image: "bestsell3.png",
-          name: "Blue bouquets",
-          price: "$ 120"
-        },
+        // {
+        //   image: "bestsell2.png",
+        //   name: "Red bouquets",
+        //   price: "$ 100"
+        // },
+        // {
+        //   image: "bestsell3.png",
+        //   name: "Blue bouquets",
+        //   price: "$ 120"
+        // },
       ],
 
       innerStyles: {},

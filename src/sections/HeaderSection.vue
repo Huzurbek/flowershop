@@ -18,4 +18,10 @@ export default {
 .main-container{
   display: flex;
 }
+/*Mobile version*/
+@media screen and (max-width: 540px) {
+  .main-container{
+    flex-direction: column-reverse;
+  }
+}
 </style>
